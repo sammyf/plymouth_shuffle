@@ -1,0 +1,11 @@
+[Unit]
+Description=Randomize Plymouth Script
+After=ssh.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/plymouth_shuffle
+
+[Install]
+WantedBy=multi-user.target
+

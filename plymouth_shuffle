@@ -1,0 +1,4 @@
+#!/bin/bash
+THEME=$(shuf -n 1 <(ls -1 /usr/share/plymouth/themes/ | grep -v '^\.'))
+sed  s/THEME/$THEME/ /usr/share/plymouth/plymouthd.defaults.main > /usr/share/plymouth/plymouthd.defaults
+
